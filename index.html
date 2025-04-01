@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite: The Mystery of the Hidden Rift</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body { margin: 0; font-family: 'Arial', sans-serif; background: #111; color: #fff; }
+        .swiper { width: 100vw; height: 100vh; }
+        .swiper-slide { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; box-sizing: border-box; background: radial-gradient(circle at center, #223 0%, #111 100%); }
+        .story-img { max-width: 80%; max-height: 50vh; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.7); margin-bottom: 20px; }
+        .story-text { max-width: 70%; font-size: 1.2em; line-height: 1.5em; text-align: center; }
+        .page-number { margin-top: 10px; font-size: 0.8em; color: #aaa; }
+        h1 { font-size: 2em; margin-bottom: 20px; }
+    </style>
+</head>
+
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+
+            <!-- Cover -->
+            <div class="swiper-slide">
+                <h1>Fortnite: The Mystery of the Hidden Rift</h1>
+                <div class="story-text">By Dad & AI - A Fortnite Adventure</div>
+                <div class="page-number">Cover</div>
+            </div>
+
+            <!-- Scene 1 -->
+            <div class="swiper-slide">
+                <img class="story-img" src="scene1.png" alt="Scene 1">
+                <div class="story-text">
+                    Lucas glided down toward the island, the wind rushing past his face. His glider flapped as he aimed for the tall hill near Tilted Towers. He could already see Mia, his best friend, doing an emote at the top.<br><br>
+                    "You're late!" Mia called, laughing. "I already grabbed a chest."<br><br>
+                    Lucas landed and picked up a grey pistol lying in the grass. "Yeah, yeah. I wanted to give you a head start."<br><br>
+                    Mia grinned. "Come on, there's something you HAVE to see."
+                </div>
+                <div class="page-number">Page 1</div>
+            </div>
+
+            <!-- Scene 2 -->
+            <div class="swiper-slide">
+                <img class="story-img" src="scene2.png" alt="Scene 2">
+                <div class="story-text">
+                    "Since when do rifts show up this small?" Lucas asked, stepping closer.<br><br>
+                    "No clue," Mia said. "But I dare you to touch it."<br><br>
+                    Lucas smirked and reached out. The moment his fingers touched the glow, the rift sucked both of them inside! They tumbled through a tunnel of flashing lights and spinning colors.<br><br>
+                    With a POP, they crash-landed in a strange new part of the island. Tilted Towers was crumbling and floating, trees were twisted, and loot chests hovered mid-air.
+                </div>
+                <div class="page-number">Page 2</div>
+            </div>
+
+            <!-- Scene 3 -->
+            <div class="swiper-slide">
+                <img class="story-img" src="scene3.png" alt="Scene 3">
+                <div class="story-text">
+                    Lucas turned. A squad of shadowy figures stood at the edge of the ruined street. They wore all-black skins with glowing red eyes.<br><br>
+                    Lucas gulped. "They don't look friendly."<br><br>
+                    The shadows charged. Lucas built a quick wall as the enemies fired strange dark energy from their weapons.<br><br>
+                    Mia threw a shockwave grenade, sending the shadows flying, and Lucas finished them off.
+                </div>
+                <div class="page-number">Page 3</div>
+            </div>
+
+            <!-- Scene 4 -->
+            <div class="swiper-slide">
+                <img class="story-img" src="scene4.png" alt="Scene 4">
+                <div class="story-text">
+                    Lucas and Mia leaned against the ruined wall, catching their breath.<br><br>
+                    "Okay," Mia said, "that was actually awesome."<br><br>
+                    Suddenly, the small rift appeared again—but this time it was bigger and brighter.<br><br>
+                    Without hesitating, they jumped through and landed safely back on the normal Fortnite island.<br><br>
+                    Lucas grinned. "Best. Match. Ever."
+                </div>
+                <div class="page-number">Page 4</div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: false,
+        });
+    </script>
+</body>
+</html>
