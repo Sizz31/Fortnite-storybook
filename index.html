@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,13 +7,72 @@
     <title>Fortnite: The Mystery of the Hidden Rift</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
-        body { margin: 0; font-family: 'Arial', sans-serif; background: #111; color: #fff; }
-        .swiper { width: 100vw; height: 100vh; }
-        .swiper-slide { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; box-sizing: border-box; background: radial-gradient(circle at center, #223 0%, #111 100%); }
-        .story-img { max-width: 80%; max-height: 50vh; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.7); margin-bottom: 20px; }
-        .story-text { max-width: 70%; font-size: 1.2em; line-height: 1.5em; text-align: center; }
-        .page-number { margin-top: 10px; font-size: 0.8em; color: #aaa; }
-        h1 { font-size: 2em; margin-bottom: 20px; }
+        body { 
+            margin: 0; 
+            font-family: 'Arial', sans-serif; 
+            background: #111; 
+            color: #fff; 
+        }
+        .swiper { 
+            width: 100vw; 
+            height: 100vh; 
+        }
+        .swiper-slide { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: flex-start; 
+            padding: 20px; 
+            box-sizing: border-box; 
+            background: radial-gradient(circle at center, #223 0%, #111 100%); 
+            overflow-y: auto; 
+        }
+        .story-img { 
+            width: 90%; 
+            height: auto; 
+            max-height: 50vh; 
+            border-radius: 15px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.7); 
+            margin-bottom: 20px; 
+        }
+        .story-text { 
+            max-width: 90%; 
+            font-size: 1.2em; 
+            line-height: 1.5em; 
+            text-align: center; 
+            margin-bottom: 40px; 
+        }
+        .page-number { 
+            margin-top: auto; 
+            font-size: 0.8em; 
+            color: #aaa; 
+            padding-bottom: 10px; 
+        }
+
+        /* Orientation tweaks */
+        @media (orientation: landscape) {
+            .story-img { max-height: 60vh; }
+            .story-text { font-size: 1.4em; }
+        }
+        @media (orientation: portrait) {
+            .story-img { max-height: 45vh; }
+            .story-text { font-size: 1.1em; }
+        }
+
+        /* Swipe Hint */
+        .swipe-hint {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0.8;
+            font-size: 0.9em;
+            animation: fadeOut 4s forwards;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 0.8; }
+            80% { opacity: 0.8; }
+            100% { opacity: 0; display: none; }
+        }
     </style>
 </head>
 
@@ -30,7 +89,7 @@
 
             <!-- Scene 1 -->
             <div class="swiper-slide">
-                <img class="story-img" src="scene1.PNG" alt="Scene 1">
+                <img class="story-img" src="scene1.png" alt="Scene 1">
                 <div class="story-text">
                     Lucas glided down toward the island, the wind rushing past his face. His glider flapped as he aimed for the tall hill near Tilted Towers. He could already see Mia, his best friend, doing an emote at the top.<br><br>
                     "You're late!" Mia called, laughing. "I already grabbed a chest."<br><br>
@@ -42,7 +101,7 @@
 
             <!-- Scene 2 -->
             <div class="swiper-slide">
-                <img class="story-img" src="scene2.PNG" alt="Scene 2">
+                <img class="story-img" src="scene2.png" alt="Scene 2">
                 <div class="story-text">
                     "Since when do rifts show up this small?" Lucas asked, stepping closer.<br><br>
                     "No clue," Mia said. "But I dare you to touch it."<br><br>
@@ -54,7 +113,7 @@
 
             <!-- Scene 3 -->
             <div class="swiper-slide">
-                <img class="story-img" src="scene3.PNG" alt="Scene 3">
+                <img class="story-img" src="scene3.png" alt="Scene 3">
                 <div class="story-text">
                     Lucas turned. A squad of shadowy figures stood at the edge of the ruined street. They wore all-black skins with glowing red eyes.<br><br>
                     Lucas gulped. "They don't look friendly."<br><br>
@@ -66,7 +125,7 @@
 
             <!-- Scene 4 -->
             <div class="swiper-slide">
-                <img class="story-img" src="scene4.PNG" alt="Scene 4">
+                <img class="story-img" src="scene4.png" alt="Scene 4">
                 <div class="story-text">
                     Lucas and Mia leaned against the ruined wall, catching their breath.<br><br>
                     "Okay," Mia said, "that was actually awesome."<br><br>
@@ -79,6 +138,9 @@
 
         </div>
     </div>
+
+    <!-- Swipe Hint -->
+    <div class="swipe-hint">⬅️ Swipe</div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
